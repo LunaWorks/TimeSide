@@ -1,6 +1,7 @@
 # TimeSide
 > Time is on my side, yes it is!
 > - The Rolling Stones
+
 Time-tracking tool for counting working hours daily.
 
 ## Goals
