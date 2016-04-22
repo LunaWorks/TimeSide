@@ -1,6 +1,11 @@
 # TimeSide
+
 > Time is on my side, yes it is!
 > - The Rolling Stones
+
+[![Build Status](https://travis-ci.org/LunaWorks/TimeSide.svg?branch=master)](https://travis-ci.org/LunaWorks/TimeSide)
+
+Deployed to [TimeSide.kalee.hu](http://timeside.dev.kalee.hu/)
 
 Time-tracking tool for counting working hours daily.
 
