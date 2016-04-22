@@ -33,3 +33,7 @@ gulp.task('deploy', function() {
         console.log ('Deployment skipped.');
     }
 });
+
+gulp.task('test', function () {
+    console.log('No tests found.');
+});

@@ -4,7 +4,7 @@
   "description": "Time-tracking tool for counting working hours daily.",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "node node_modules/gulp/bin/gulp.js --no-color test"
   },
   "repository": {
     "type": "git",
