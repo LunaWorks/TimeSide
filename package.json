@@ -1,0 +1,29 @@
+{
+  "name": "time_side",
+  "version": "0.0.1",
+  "description": "Time-tracking tool for counting working hours daily.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LunaWorks/TimeSide.git"
+  },
+  "keywords": [
+    "timetracking"
+  ],
+  "author": "LunaWorks",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LunaWorks/TimeSide/issues"
+  },
+  "homepage": "https://github.com/LunaWorks/TimeSide#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-debug": "^2.1.2",
+    "gulp-util": "^3.0.7",
+    "minimist": "^1.2.0",
+    "vinyl-ftp": "^0.4.5"
+  }
+}

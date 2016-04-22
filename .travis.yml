@@ -1,0 +1,21 @@
+# Common
+language: node_js
+
+# Build
+node_js:
+ - "4"
+install:
+  - npm install
+before_script:
+  - npm install -g gulp
+
+# Deployment
+branches:
+  only:
+    - master
+env:
+  global:
+    - "FTP_USER=timeside_travisCi"
+    - "FTP_PASSWORD=DeployTimeside"
+after_success:
+    gulp deploy --user $FTP_USER --password $FTP_PASSWORD --request $TRAVIS_PULL_REQUEST
