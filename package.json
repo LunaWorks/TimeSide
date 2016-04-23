@@ -13,7 +13,10 @@
   "keywords": [
     "timetracking"
   ],
-  "author": "LunaWorks",
+  "author": { "name" : "Mark Kalinovits"
+  , "email" : "kalee.mark@gmail.com"
+  , "url" : "kalee.hu"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/LunaWorks/TimeSide/issues"
