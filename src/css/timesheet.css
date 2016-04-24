@@ -1,0 +1,7 @@
+.jumbotron .btn {
+    margin-bottom: 25px;
+}
+
+.disabled .progress-bar {
+    background-image: -webkit-linear-gradient(top, lightgray, gray 100%);
+}
