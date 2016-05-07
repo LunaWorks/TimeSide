@@ -3,14 +3,29 @@ var ftp = require('vinyl-ftp');
 var gutil = require('gulp-util');
 var debug = require('gulp-debug');
 var minimist = require('minimist');
+var gp_concat = require('gulp-concat'),
+    gp_rename = require('gulp-rename'),
+    gp_uglify = require('gulp-uglify'),
+    gp_sourcemaps = require('gulp-sourcemaps');
+
+gulp.task('js-fef', function () {
+    return gulp.src(['./src/app/core/index.js', './src/app/core/script/*.js'])
+        .pipe(gp_sourcemaps.init())
+        .pipe(gp_concat('app.js'))
+        .pipe(gulp.dest('./.build/dev/js'))
+        .pipe(gp_rename('app.min.js'))
+        .pipe(gp_uglify())
+        .pipe(gp_sourcemaps.write('./'))
+        .pipe(gulp.dest('./.build/dev/js'));
+});
 var args = minimist(process.argv.slice(2));
 
-gulp.task('listFiles', function() {
+gulp.task('listFiles', function () {
     gulp.src(['./src/*', './src/**/*'])
         .pipe(debug());
 });
 
-gulp.task('deploy', function() {
+gulp.task('deploy', function () {
     var isPull = args.request !== 'false';
     console.log(args.request);
     console.log('Is pull-request: ' + isPull);

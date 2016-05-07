@@ -40,9 +40,6 @@ local.properties
 # sbteclipse plugin
 .target
 
-# Tern plugin
-.tern-project
-
 # TeXlipse plugin
 .texlipse
 
@@ -84,6 +81,7 @@ nbactions.xml
 
 # IntelliJ
 /out/
+/.idea
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -99,4 +97,4 @@ fabric.properties
 
 # User Specified
 /node_modules
-/.idea
+/.build
