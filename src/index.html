@@ -6,7 +6,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="LunaWorks">
-    <link rel="icon" href="images/timesheet.png">
+    <link rel="icon" href="../src/images/timesheet.png">
 
     <title>TimeSide Project</title>
 
@@ -20,16 +20,16 @@
           integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="../src/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/sticky-footer-navbar.css" rel="stylesheet">
+    <link href="../src/css/sticky-footer-navbar.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]>
-    <script src="js/ie8-responsive-file-warning.js"></script>
+    <script src="../src/js/ie8-responsive-file-warning.js"></script>
     <![endif]-->
-    <script src="js/ie-emulation-modes-warning.js"></script>
+    <script src="../src/js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -39,82 +39,15 @@
 </head>
 <body>
 
-<!-- Fixed navbar -->
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">TimeSide</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="timesheet.html">Time sheet</a></li>
-                <li><a href="#history">History</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">Manage<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-header">Calendar</li>
-                        <li><a href="#">Working hours</a></li>
-                        <li><a href="#">Workdays</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li class="dropdown-header">Data</li>
-                        <li><a href="#">Synchronize</a></li>
-                        <li><a href="#">Delete</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#about">About</a></li>
-            </ul>
-        </div><!--/.nav-collapse -->
-    </div>
-</nav>
+<div data-ng-app="TimeSide_Core" >
+    {{'Angular is ON.'}}
 
-<!-- Begin page content -->
-<div class="container">
-    <div class="page-header">
-        <h1>TimeSide</h1>
+    <div ng-controller="WelcomeCtrl as wc">
+        Message: {{ mesage }}
+        Message 2: {{ wc.message }}
     </div>
-    <div class="row">
-        <div class="col-xs-12">
-            <p class="lead">Time-tracking tool for counting working hours daily.</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-6 col-sm-3">
-            <img src="images/timesheet.png" class="img-responsive" alt="Responsive image"/>
-        </div>
-        <div class="col-xs-6 col-sm-6">
-            <blockquote class="blockquote-reverse">
-                <p>Time is on my side, yes it is!</p>
-                <footer>The Rolling Stones</footer>
-            </blockquote>
-        </div>
-        <div class="col-xs-12 col-sm-3">
-            <p>Repository on GitHub <a href="https://github.com/LunaWorks/TimeSide">LunaWorks/TimeSide</a>.</p>
 
-        </div>
-    </div>
 </div>
-
-<footer class="footer">
-    <div class="container">
-        <div class="row text-muted">
-            <div class="hidden-xs col-sm-2 text-center">since 2016</div>
-            <div class="col-sm-8 text-center">created by <a href="https://github.com/LunaWorks">LunaWorks</a></div>
-            <div class="hidden-xs col-sm-2 text-center">version 0.0.1</div>
-        </div>
-    </div>
-</footer>
-
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
@@ -125,12 +58,12 @@
         integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
         crossorigin="anonymous"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="js/ie10-viewport-bug-workaround.js"></script>
+<script src="../src/js/ie10-viewport-bug-workaround.js"></script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
 
-<div id="window-resizer-tooltip" style="display: none;"><a href="#" title="Edit settings"></a><span
-        class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1366</span> x <span
-        class="tooltipHeight" id="winHeight">728</span><br><span class="tooltipTitle">Viewport size: </span><span
-        class="tooltipWidth" id="vpWidth">1366</span> x <span class="tooltipHeight" id="vpHeight">422</span></div>
+<script  src="main/core/script/Core.js"></script>
+<script  src="main/core/script/WelcomeCtrl.js"></script>
+
 </body>
 </html>
