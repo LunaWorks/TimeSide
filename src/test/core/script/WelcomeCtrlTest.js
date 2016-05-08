@@ -8,9 +8,9 @@ describe('WelcomeCtrl', function () {
         $controller = _$controller_;
     }));
 
-   it('should declare message property', function () {
-       var $scope = {};
-       var underTest = $controller('WelcomeCtrl', { $scope: $scope });
-       expect(underTest.message).toBeDefined();
-   });
+    it('should declare this.message property', function () {
+        var $scope = {};
+        var underTest = $controller('WelcomeCtrl', { $scope: $scope });
+        expect(underTest.message).toBeDefined();
+    });
 });

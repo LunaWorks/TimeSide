@@ -4,8 +4,7 @@
 (function(angular) {
     var core = angular.module('TimeSide_Core');
 
-    core.controller('WelcomeCtrl', ['$scope', function($scope) {
-        $scope.mesage = "Welcome!";
+    core.controller('WelcomeCtrl', [function() {
         this.message = "Hey Dude!";
     }]);
 })(angular);
