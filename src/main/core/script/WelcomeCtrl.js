@@ -5,6 +5,6 @@
     var core = angular.module('TimeSide_Core');
 
     core.controller('WelcomeCtrl', [function() {
-        this.message = "Hey Dude!";
+        this.message = 'Hey Dude!';
     }]);
 })(angular);
