@@ -4,7 +4,7 @@
   "description": "Time-tracking tool for counting working hours daily.",
   "main": "index.js",
   "scripts": {
-    "test": "node node_modules/gulp/bin/gulp.js --no-color test"
+    "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/LunaWorks/TimeSide#readme",
   "devDependencies": {
+    "angular": "^1.5.5",
     "angular-mocks": "^1.5.5",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
