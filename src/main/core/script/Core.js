@@ -5,4 +5,4 @@
  */
 (function(angular) {
     angular.module('TimeSide_Core', []);
-})(angular);
+}(angular));

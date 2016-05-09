@@ -1,9 +1,10 @@
-var gulp = require('gulp');
-var ftp = require('vinyl-ftp');
-var gutil = require('gulp-util');
-var debug = require('gulp-debug');
-var minimist = require('minimist');
-var gp_concat = require('gulp-concat'),
+var gulp = require('gulp'),
+    path = require('gulp-path')
+    ftp = require('vinyl-ftp',
+    gutil = require('gulp-util'),
+    debug = require('gulp-debug'),
+    minimist = require('minimist'),
+    gp_concat = require('gulp-concat'),
     gp_rename = require('gulp-rename'),
     gp_uglify = require('gulp-uglify'),
     gp_sourcemaps = require('gulp-sourcemaps');
@@ -13,9 +14,8 @@ var Server = require('karma').Server;
  * Run test once and exit
  */
 gulp.task('test', function (done) {
-    console.log(__dirname + '/karma.conf.js');
     new Server({
-        configFile: __dirname + '/karma.conf.js',
+        configFile: path.join(__dirname, '/karma.conf.js'),
         singleRun: true
     }, done).start();
 });

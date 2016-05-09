@@ -7,4 +7,4 @@
     core.controller('WelcomeCtrl', [function() {
         this.message = "Hey Dude!";
     }]);
-})(angular);
+}(angular));
