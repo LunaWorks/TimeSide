@@ -1,0 +1,9 @@
+languages:
+  JavaScript: true
+exclude_paths:
+  # Excluging vendor files
+- "src/css/ie10-viewport-bug-workaround.css"
+- "src/css/sticky-footer-navbar.css"
+- "src/js/ie-emulation-modes-warning.js"
+- "src/js/ie8-responsive-file-warning.js"
+- "src/js/ie10-viewport-bug-workaround.js"
