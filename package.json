@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/LunaWorks/TimeSide#readme",
   "devDependencies": {
+    "angular": "^1.5.5",
     "angular-mocks": "^1.5.5",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
