@@ -8,7 +8,7 @@ var gulp = require('gulp'),
 /**
  * Concatenate JS files
  */
-gulp.task('js.concatenate', function () {
+gulp.task('js.build.dev', function () {
     return gulp.src(['./src/main/core/index.js', './src/main/core/script/*.js'])
         .pipe(gp_sourcemaps.init())
         .pipe(gp_concat('main.js'))
@@ -21,7 +21,7 @@ gulp.task('js.concatenate', function () {
 /**
  * Concatenate and uglify JS files
  */
-gulp.task('js.uglify', function () {
+gulp.task('js.build.prod', function () {
     return gulp.src(['./src/main/core/script/Core.js', './src/main/core/script/*.js'])
         .pipe(gp_sourcemaps.init())
         .pipe(gp_concat('main.js'))
@@ -29,7 +29,7 @@ gulp.task('js.uglify', function () {
         .pipe(gp_rename('main.min.js'))
         .pipe(gp_uglify())
         .pipe(gp_sourcemaps.write('./'))
-        .pipe(gulp.dest('./.build/dev/js'));
+        .pipe(gulp.dest('./.build/prod/js'));
 });
 
 // JSHint task
@@ -44,7 +44,7 @@ gulp.task('js.hint', function() {
  */
 var Server = require('karma').Server;
 
-gulp.task('test', function (done) {
+gulp.task('js.test', function (done) {
     console.log(__dirname + '/karma.conf.js');
     new Server({
         configFile: __dirname + '/../karma.conf.js',
