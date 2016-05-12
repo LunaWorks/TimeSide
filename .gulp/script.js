@@ -11,9 +11,9 @@ var gulp = require('gulp'),
 gulp.task('js.build.dev', function () {
     return gulp.src(['./src/main/core/index.js', './src/main/core/script/*.js'])
         .pipe(gp_sourcemaps.init())
-        .pipe(gp_concat('main.js'))
+        .pipe(gp_concat('aPP.js'))
         .pipe(gulp.dest('./.build/dev/js'))
-        .pipe(gp_rename('main.min.js'))
+        .pipe(gp_rename('app.min.js'))
         .pipe(gp_sourcemaps.write('./'))
         .pipe(gulp.dest('./.build/dev/js'));
 });
@@ -22,11 +22,12 @@ gulp.task('js.build.dev', function () {
  * Concatenate and uglify JS files
  */
 gulp.task('js.build.prod', function () {
+    var version = require('../package.json').version;
     return gulp.src(['./src/main/core/script/Core.js', './src/main/core/script/*.js'])
         .pipe(gp_sourcemaps.init())
-        .pipe(gp_concat('main.js'))
+        .pipe(gp_concat('app-' + version + '.js'))
         .pipe(gulp.dest('./.build/dev/js'))
-        .pipe(gp_rename('main.min.js'))
+        .pipe(gp_rename('app-' + version + '.min.js'))
         .pipe(gp_uglify())
         .pipe(gp_sourcemaps.write('./'))
         .pipe(gulp.dest('./.build/prod/js'));
