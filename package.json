@@ -25,6 +25,7 @@
   "homepage": "https://github.com/LunaWorks/TimeSide#readme",
   "devDependencies": {
     "angular-mocks": "^1.5.5",
+    "bootstrap": "^4.0.0-alpha",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-debug": "^2.1.2",
