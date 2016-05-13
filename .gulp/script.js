@@ -11,7 +11,7 @@ var gulp = require('gulp'),
 gulp.task('js.build.dev', function () {
     return gulp.src(['./src/main/core/index.js', './src/main/core/script/*.js'])
         .pipe(gp_sourcemaps.init())
-        .pipe(gp_concat('aPP.js'))
+        .pipe(gp_concat('app.js'))
         .pipe(gulp.dest('./.build/dev/js'))
         .pipe(gp_rename('app.min.js'))
         .pipe(gp_sourcemaps.write('./'))
