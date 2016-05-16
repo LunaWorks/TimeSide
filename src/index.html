@@ -12,6 +12,7 @@
 
     <!-- Bootstrap core CSS -->
     <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="./css/tether.min.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
@@ -36,28 +37,33 @@
     Everything here will be replaced
     <!-- endbuild -->
 </head>
-<body>
+<body data-ng-app="App">
 
-<div data-ng-app="TimeSide_Core">
+<div ng-include="'view/navbar.html'"></div>
+
+<div class="container" ng-view data-ng-controller="WelcomeCtrl as wc">
     {{'Angular is ON.'}}
 
-    <div ng-controller="WelcomeCtrl as wc">
-        Message: {{ mesage }}
-        Message 2: {{ wc.message }}
-    </div>
-
+    Message: {{ mesage }}
+    Message 2: {{ wc.message }}
 </div>
+
+<div ng-include="'view/footer.html'"></div>
+
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="./js/jquery-2.3.3.min.js"></script>
+<script src="./js/jquery-2.2.3.min.js"></script>
+
 <!-- Latest compiled and minified JavaScript -->
+<script src="./js/tether.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="./js/ie10-viewport-bug-workaround.js"></script>
 
 <script src="./js/angular.min.js"></script>
+<script src="./js/angular-route.min.js"></script>
 
 <!-- build:js -->
 <script src="main/core/script/Core.js"></script>

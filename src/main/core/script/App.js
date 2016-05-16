@@ -4,5 +4,5 @@
  * Core module's initializer
  */
 (function(angular) {
-    angular.module('TimeSide_Core', []);
+    angular.module('App', ['ngRoute']);
 })(angular);

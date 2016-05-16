@@ -1,5 +1,5 @@
 describe('WelcomeCtrl', function () {
-    beforeEach(module('TimeSide_Core'));
+    beforeEach(module('App'));
 
     var $controller;
 
@@ -9,8 +9,7 @@ describe('WelcomeCtrl', function () {
     }));
 
     it('should declare this.message property', function () {
-        var $scope = {};
-        var underTest = $controller('WelcomeCtrl', { $scope: $scope });
+        var underTest = $controller('WelcomeCtrl');
         expect(underTest.message).toBeDefined();
     });
 });
