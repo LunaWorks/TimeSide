@@ -13,7 +13,6 @@ gulp.task('style', ['style.build.dev']);
 
 gulp.task('style.build.dev', function () {
     return gulp.src('./src/main/**/style/*.scss')
-        .pipe(debug())
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
         .pipe(sourcemaps.write())
