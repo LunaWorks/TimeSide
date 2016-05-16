@@ -2,35 +2,21 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     gp_concat = require('gulp-concat'),
     gp_rename = require('gulp-rename'),
-    gp_uglify = require('gulp-uglify'),
     gp_sourcemaps = require('gulp-sourcemaps');
+
+gulp.task('script', ['js.build.dev']);
 
 /**
  * Concatenate JS files
  */
 gulp.task('js.build.dev', function () {
-    return gulp.src(['./src/main/core/index.js', './src/main/core/script/*.js'])
+    return gulp.src(['./src/main/core/App.js', './src/main/core/script/*.js'])
         .pipe(gp_sourcemaps.init())
         .pipe(gp_concat('app.js'))
         .pipe(gulp.dest('./.build/dev/js'))
         .pipe(gp_rename('app.min.js'))
         .pipe(gp_sourcemaps.write('./'))
         .pipe(gulp.dest('./.build/dev/js'));
-});
-
-/**
- * Concatenate and uglify JS files
- */
-gulp.task('js.build.prod', function () {
-    var version = require('../package.json').version;
-    return gulp.src(['./src/main/core/script/Core.js', './src/main/core/script/*.js'])
-        .pipe(gp_sourcemaps.init())
-        .pipe(gp_concat('app-' + version + '.js'))
-        .pipe(gulp.dest('./.build/dev/js'))
-        .pipe(gp_rename('app-' + version + '.min.js'))
-        .pipe(gp_uglify())
-        .pipe(gp_sourcemaps.write('./'))
-        .pipe(gulp.dest('./.build/prod/js'));
 });
 
 // JSHint task

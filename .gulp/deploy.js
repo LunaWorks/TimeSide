@@ -9,6 +9,8 @@ var gulp = require('gulp'),
     debug = require('gulp-debug');
 
 var args = minimist(process.argv.slice(2));
+var buildPath = './.build/dev';
+var remotePath = './';
 
 gulp.task('deploy', function () {
     var isPull = args.request !== 'false';
@@ -17,7 +19,6 @@ gulp.task('deploy', function () {
     console.log('Triggering deployment: ' + !isPull);
     if (!isPull) {
         console.log('Deploying...');
-        var remotePath = './';
         var conn = ftp.create({
             host: 'ftp.s5.domain-ellenorzes.hu',
             user: args.user,
@@ -25,7 +26,7 @@ gulp.task('deploy', function () {
             log: gutil.log
         });
 
-        gulp.src(['./src/*', './src/**/*'])
+        gulp.src([buildPath])
             .pipe(debug())
             .pipe(conn.newer(remotePath))
             .pipe(conn.dest(remotePath));
