@@ -13,6 +13,10 @@
                 templateUrl: 'view/welcome.html',
                 controller: 'WelcomeCtrl'
             }).
+            when('/report', {
+                templateUrl: 'view/report.html',
+                controller: 'ReportCtrl'
+            }).
             otherwise({
                 redirectTo: '/'
             });
