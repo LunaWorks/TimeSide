@@ -10,7 +10,7 @@ gulp.task('script', ['js.build.dev']);
  * Concatenate JS files
  */
 gulp.task('js.build.dev', function () {
-    return gulp.src(['./src/main/core/App.js', './src/main/core/script/*.js'])
+    return gulp.src(['./src/main/core/App.js', './src/main/**/script/*.js'])
         .pipe(gp_sourcemaps.init())
         .pipe(gp_concat('app.js'))
         .pipe(gulp.dest('./.build/dev/js'))
